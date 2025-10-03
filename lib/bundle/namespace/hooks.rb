@@ -2,6 +2,9 @@
 
 require_relative "dsl_extension"
 require_relative "dependency_extension"
+require_relative "source_extensions"
+require_relative "resolver_extension"
+require_relative "specification_extension"
 
 module Bundle
   module Namespace
@@ -12,6 +15,9 @@ module Bundle
         def install!
           install_dsl_extension
           install_dependency_extension
+          install_source_extensions
+          install_resolver_extension
+          install_specification_extension
         end
 
         private
@@ -29,6 +35,46 @@ module Bundle
 
           unless Bundler::Dependency.ancestors.include?(Bundle::Namespace::DependencyExtension)
             Bundler::Dependency.prepend(Bundle::Namespace::DependencyExtension)
+          end
+        end
+
+        # Prepend source extensions to Bundler::Source::Rubygems
+        def install_source_extensions
+          return unless defined?(Bundler::Source::Rubygems)
+
+          unless Bundler::Source::Rubygems.ancestors.include?(Bundle::Namespace::SourceRubygemsExtension)
+            Bundler::Source::Rubygems.prepend(Bundle::Namespace::SourceRubygemsExtension)
+          end
+        end
+
+        # Prepend resolver extension to Bundler::Resolver
+        def install_resolver_extension
+          return unless defined?(Bundler::Resolver)
+
+          unless Bundler::Resolver.ancestors.include?(Bundle::Namespace::ResolverExtension)
+            Bundler::Resolver.prepend(Bundle::Namespace::ResolverExtension)
+          end
+        end
+
+        # Prepend specification extension to remote and lazy specifications
+        def install_specification_extension
+          install_on_remote_specification
+          install_on_lazy_specification
+        end
+
+        def install_on_remote_specification
+          return unless defined?(Bundler::RemoteSpecification)
+
+          unless Bundler::RemoteSpecification.ancestors.include?(Bundle::Namespace::SpecificationExtension)
+            Bundler::RemoteSpecification.prepend(Bundle::Namespace::SpecificationExtension)
+          end
+        end
+
+        def install_on_lazy_specification
+          return unless defined?(Bundler::LazySpecification)
+
+          unless Bundler::LazySpecification.ancestors.include?(Bundle::Namespace::SpecificationExtension)
+            Bundler::LazySpecification.prepend(Bundle::Namespace::SpecificationExtension)
           end
         end
       end
