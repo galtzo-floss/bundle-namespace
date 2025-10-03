@@ -12,3 +12,4 @@
 
 # bundler source can be added locally for easier contextual lookups during development
 /bundler/
+/bundler.reference/
