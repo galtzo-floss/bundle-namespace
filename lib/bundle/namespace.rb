@@ -12,6 +12,7 @@ require_relative "namespace/specification_extension"
 require_relative "namespace/lockfile_generator"
 require_relative "namespace/lockfile_parser"
 require_relative "namespace/lockfile_validator"
+require_relative "namespace/bundler_integration"
 require_relative "namespace/plugin"
 
 module Bundle
