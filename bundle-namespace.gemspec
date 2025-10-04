@@ -41,8 +41,6 @@ Gem::Specification.new do |spec|
 
   # Development dependencies
   spec.add_development_dependency "bundler", ">= 2.3.0"
-  spec.add_development_dependency "rake", "~> 13.0"
-  spec.add_development_dependency "rspec", "~> 3.12"
-  spec.add_development_dependency "rubocop", "~> 1.50"
-  spec.add_development_dependency "yard", "~> 0.9"
+
+  spec.add_development_dependency "kettle-dev", "~> 1.1"
 end

@@ -16,6 +16,7 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.15.0)
+    kettle-dev (1.1.31)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     parallel (1.27.0)
@@ -70,7 +71,6 @@ GEM
     unicode-display_width (3.2.0)
       unicode-emoji (~> 4.1)
     unicode-emoji (4.1.0)
-    yard (0.9.37)
 
 PLATFORMS
   ruby
@@ -80,10 +80,10 @@ DEPENDENCIES
   bundle-namespace!
   bundler (>= 2.3.0)
   irb
+  kettle-dev (~> 1.1)
   rake (~> 13.0)
-  rspec (~> 3.12, ~> 3.0)
-  rubocop (~> 1.50, ~> 1.21)
-  yard (~> 0.9)
+  rspec (~> 3.0)
+  rubocop (~> 1.21)
 
 BUNDLED WITH
    2.7.2
