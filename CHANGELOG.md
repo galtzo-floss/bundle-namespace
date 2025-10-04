@@ -8,6 +8,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.1.0] - TBD
+
+### Added
+- Initial beta release
+- Full namespace support for Bundler
+- Comprehensive documentation
+- 100% test coverage
 - Initial implementation of Bundle::Namespace plugin
 - Phase 1: Foundation
   - DSL extension with `namespace` macro for Gemfiles
@@ -32,28 +50,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Comprehensive README with usage examples
   - Complete test coverage (104 examples, 100% passing)
 
-### Changed
-- N/A (initial release)
-
-### Deprecated
-- N/A (initial release)
-
-### Removed
-- N/A (initial release)
-
-### Fixed
-- N/A (initial release)
-
-### Security
-- N/A (initial release)
-
-## [0.1.0] - TBD
-
-### Added
-- Initial beta release
-- Full namespace support for Bundler
-- Comprehensive documentation
-- 100% test coverage
 
 [Unreleased]: https://github.com/pboling/bundle-namespace/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/pboling/bundle-namespace/releases/tag/v0.1.0
