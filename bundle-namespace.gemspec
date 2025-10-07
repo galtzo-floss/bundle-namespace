@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.description = "Extends Bundler's DSL with a namespace macro to support organization-scoped and user-scoped gem repositories, enabling differentiation between multiple flavors of the same gem from namespace-aware sources."
   spec.homepage = "https://github.com/galtzo-floss/bundle-namespace"
   spec.licenses = ["MIT"]
-  spec.required_ruby_version = ">= 2.7.0"
+  spec.required_ruby_version = ">= 3.1.0"
 
   # Linux distros often package gems and securely certify them independent
   #   of the official RubyGem certification process. Allowed via ENV["SKIP_GEM_SIGNING"]

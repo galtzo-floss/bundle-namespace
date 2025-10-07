@@ -277,8 +277,8 @@ This lockfile ensures reproducible builds with namespace information.
 
 ## Requirements
 
-- Ruby >= 2.7.0
-- Bundler >= 2.3.0
+- Ruby >= 3.1
+- Bundler >= 2.6
 
 ## Source Compatibility
 
