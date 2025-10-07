@@ -12,14 +12,12 @@
 [gem-coop]: https://gem.coop
 [martin-ann]: https://martinemde.com/2025/10/05/announcing-gem-coop.html
 
-[![Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0][🖼️galtzo-i]][🖼️galtzo-discord] [![ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5][🖼️ruby-lang-i]][🖼️ruby-lang] [![bundle-namespace Logo by Aboling0, CC BY-SA 4.0][🖼️bundle-namespace-i]][🖼️bundle-namespace]
+[![Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0][🖼️galtzo-i]][🖼️galtzo-discord] [![ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5][🖼️ruby-lang-i]][🖼️ruby-lang]
 
 [🖼️galtzo-i]: https://logos.galtzo.com/assets/images/galtzo-floss/avatar-192px.svg
 [🖼️galtzo-discord]: https://discord.gg/3qme4XHNKN
 [🖼️ruby-lang-i]: https://logos.galtzo.com/assets/images/ruby-lang/avatar-192px.svg
 [🖼️ruby-lang]: https://www.ruby-lang.org/
-[🖼️bundle-namespace-i]: https://logos.galtzo.com/assets/images/galtzo-floss/bundle-namespace/avatar-192px.svg
-[🖼️bundle-namespace]: https://github.com/galtzo-floss/bundle-namespace
 
 # 🍕 Bundle::Namespace
 
