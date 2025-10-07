@@ -236,7 +236,7 @@ end
 
 Phase 2 is complete. Ready to implement Phase 3:
 
-1. **Lockfile Generator** - Create `bundler-namespace-lock.yaml`
+1. **Lockfile Generator** - Create `bundle-namespace-lock.yaml`
 2. **Lockfile Parser** - Read and validate namespace lockfile
 3. **Lockfile Validator** - Ensure consistency across lockfiles
 4. **Integration Tests** - End-to-end tests with actual resolution

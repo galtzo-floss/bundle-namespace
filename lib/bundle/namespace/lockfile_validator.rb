@@ -153,7 +153,7 @@ require "yaml"
 
 module Bundle
   module Namespace
-    # Generates the bundler-namespace-lock.yaml file
+    # Generates the bundle-namespace-lock.yaml file
     class LockfileGenerator
       attr_reader :definition, :lockfile_path
 

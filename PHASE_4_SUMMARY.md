@@ -18,7 +18,7 @@ We have successfully completed **Phase 4: Polish & Integration** - the final pha
 Automatically integrates with Bundler's lifecycle to seamlessly handle namespace lockfiles:
 
 **Key Features:**
-- **Auto-load lockfile** - Reads `bundler-namespace-lock.yaml` before resolution
+- **Auto-load lockfile** - Reads `bundle-namespace-lock.yaml` before resolution
 - **Auto-generate lockfile** - Writes namespace lockfile after `bundle install`
 - **Validation integration** - Validates lockfile consistency during load
 - **Lifecycle hooks** - Integrates with Bundler's install/update/check commands
@@ -27,13 +27,13 @@ Automatically integrates with Bundler's lifecycle to seamlessly handle namespace
 ```ruby
 # Before resolution - load namespace lockfile
 Bundler::Dsl#to_definition
-  → loads bundler-namespace-lock.yaml
+  → loads bundle-namespace-lock.yaml
   → populates registry
   → validates consistency
 
 # After resolution - generate namespace lockfile  
 Bundler::Definition#lock
-  → generates bundler-namespace-lock.yaml
+  → generates bundle-namespace-lock.yaml
   → reports success/failure
 ```
 
@@ -132,10 +132,10 @@ $ bundle install
 # Plugin automatically:
 # 1. Parses namespace declarations (Phase 1)
 # 2. Resolves with namespace awareness (Phase 2)  
-# 3. Generates bundler-namespace-lock.yaml (Phase 3)
-# 4. Reports: "Namespace lockfile written to bundler-namespace-lock.yaml" (Phase 4) ✨
+# 3. Generates bundle-namespace-lock.yaml (Phase 3)
+# 4. Reports: "Namespace lockfile written to bundle-namespace-lock.yaml" (Phase 4) ✨
 
-# Result: Both Gemfile.lock and bundler-namespace-lock.yaml created
+# Result: Both Gemfile.lock and bundle-namespace-lock.yaml created
 ```
 
 ### Subsequent Bundle Install
@@ -145,7 +145,7 @@ $ bundle install
 $ bundle install
 
 # Plugin automatically:
-# 1. Loads bundler-namespace-lock.yaml (Phase 4) ✨
+# 1. Loads bundle-namespace-lock.yaml (Phase 4) ✨
 # 2. Populates registry with namespace info
 # 3. Validates consistency
 # 4. Uses locked namespace versions
@@ -238,7 +238,7 @@ end
 #    - Stores in Registry
 
 # 2. PHASE 4: Load Lockfile (if exists)
-#    - Reads bundler-namespace-lock.yaml
+#    - Reads bundle-namespace-lock.yaml
 #    - Populates registry from lockfile
 #    - Validates consistency
 
@@ -249,16 +249,16 @@ end
 #    - Resolves: v1.5.2 for engineering, v2.0.1 for security
 
 # 4. PHASE 3: Generate Lockfile
-#    - Creates bundler-namespace-lock.yaml
+#    - Creates bundle-namespace-lock.yaml
 #    - Three-level structure: source → namespace → gems
 #    - Includes version, dependencies, platform
 
 # 5. PHASE 4: Report Success
-#    - "Namespace lockfile written to bundler-namespace-lock.yaml"
+#    - "Namespace lockfile written to bundle-namespace-lock.yaml"
 #    - User sees success message
 
 # ========================================
-# GENERATED: bundler-namespace-lock.yaml
+# GENERATED: bundle-namespace-lock.yaml
 # ========================================
 # ---
 # "https://gems.mycompany.com":
@@ -427,7 +427,7 @@ GEM
 
 #### 2. Namespace Lockfile (New)
 
-The `bundler-namespace-lock.yaml` adds the missing dimension - which namespace each gem belongs to:
+The `bundle-namespace-lock.yaml` adds the missing dimension - which namespace each gem belongs to:
 
 ```yaml
 ---
@@ -602,7 +602,7 @@ GEM
     shared-lib (2.0.1)
 ```
 
-**bundler-namespace-lock.yaml contains:**
+**bundle-namespace-lock.yaml contains:**
 ```yaml
 "https://gems.mycompany.com":
   engineering:
@@ -675,7 +675,7 @@ end
 
 **2. Namespace Tracking for Future Enhancements**
 
-The `bundler-namespace-lock.yaml` tracks which gems were intended for which namespaces. This enables:
+The `bundle-namespace-lock.yaml` tracks which gems were intended for which namespaces. This enables:
 
 - **Documentation:** Clear record of namespace organization
 - **Validation:** Detect when namespace dependencies conflict

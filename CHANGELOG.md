@@ -51,7 +51,7 @@ Please file a bug if you notice a violation of semantic versioning.
   - Specification extensions to track namespaces in gem specs
   - Automatic namespace detection based on registered dependencies
 - Phase 3: Lockfile Generation
-  - YAML-based namespace lockfile (bundler-namespace-lock.yaml)
+  - YAML-based namespace lockfile (bundle-namespace-lock.yaml)
   - Three-level lockfile structure: source → namespace → gems
   - Lockfile parser to restore namespace information
   - Lockfile validator with error and warning reporting
@@ -62,5 +62,5 @@ Please file a bug if you notice a violation of semantic versioning.
   - Comprehensive README with usage examples
   - Complete test coverage (104 examples, 100% passing)
 
-[Unreleased]: https://github.com/pboling/bundle-namespace/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/pboling/bundle-namespace/releases/tag/v0.1.0
+[Unreleased]: https://github.com/galtzo-floss/bundle-namespace/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/galtzo-floss/bundle-namespace/releases/tag/v0.1.0

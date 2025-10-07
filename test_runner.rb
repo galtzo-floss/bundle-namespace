@@ -49,7 +49,7 @@ else
   exit 1
 end
 
-if Bundle::Namespace::Configuration.lockfile_path == "bundler-namespace-lock.yaml"
+if Bundle::Namespace::Configuration.lockfile_path == "bundle-namespace-lock.yaml"
   puts "✓ Configuration.lockfile_path has correct default"
 else
   puts "✗ lockfile_path default test failed"

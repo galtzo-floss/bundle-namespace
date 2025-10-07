@@ -79,7 +79,7 @@ RSpec.describe Bundle::Namespace::BundlerIntegration do
       generator = double("Generator")
       allow(generator).to receive(:needed?).and_return(true)
       allow(generator).to receive(:generate!).and_return(true)
-      allow(generator).to receive(:lockfile_path).and_return("bundler-namespace-lock.yaml")
+      allow(generator).to receive(:lockfile_path).and_return("bundle-namespace-lock.yaml")
 
       allow(Bundle::Namespace::LockfileGenerator).to receive(:new).and_return(generator)
 

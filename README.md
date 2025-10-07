@@ -18,8 +18,8 @@
 [🖼️galtzo-discord]: https://discord.gg/3qme4XHNKN
 [🖼️ruby-lang-i]: https://logos.galtzo.com/assets/images/ruby-lang/avatar-192px.svg
 [🖼️ruby-lang]: https://www.ruby-lang.org/
-[🖼️bundle-namespace-i]: https://logos.galtzo.com/assets/images/pboling/bundle-namespace/avatar-192px.svg
-[🖼️bundle-namespace]: https://github.com/pboling/bundle-namespace
+[🖼️bundle-namespace-i]: https://logos.galtzo.com/assets/images/galtzo-floss/bundle-namespace/avatar-192px.svg
+[🖼️bundle-namespace]: https://github.com/galtzo-floss/bundle-namespace
 
 # 🍕 Bundle::Namespace
 
@@ -75,14 +75,14 @@ Compatible with MRI Ruby 2.7.0+, and concordant releases of JRuby, and TruffleRu
 
 | Federated [DVCS][💎d-in-dvcs] Repository        | Status                                                                | Issues                    | PRs                      | Wiki                      | CI                       | Discussions                  |
 |-------------------------------------------------|-----------------------------------------------------------------------|---------------------------|--------------------------|---------------------------|--------------------------|------------------------------|
-| 🧪 [pboling/bundle-namespace on GitLab][📜src-gl]   | The Truth                                                             | [💚][🤝gl-issues]         | [💚][🤝gl-pulls]         | [💚][📜gl-wiki]           | 🐭 Tiny Matrix           | ➖                            |
-| 🧊 [pboling/bundle-namespace on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate])                             | [💚][🤝cb-issues]         | [💚][🤝cb-pulls]         | ➖                         | ⭕️ No Matrix             | ➖                            |
-| 🐙 [pboling/bundle-namespace on GitHub][📜src-gh]   | Another Mirror                                                        | [💚][🤝gh-issues]         | [💚][🤝gh-pulls]         | [💚][📜gh-wiki]           | 💯 Full Matrix           | [💚][gh-discussions]         |
+| 🧪 [galtzo-floss/bundle-namespace on GitLab][📜src-gl]   | The Truth                                                             | [💚][🤝gl-issues]         | [💚][🤝gl-pulls]         | [💚][📜gl-wiki]           | 🐭 Tiny Matrix           | ➖                            |
+| 🧊 [galtzo-floss/bundle-namespace on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate])                             | [💚][🤝cb-issues]         | [💚][🤝cb-pulls]         | ➖                         | ⭕️ No Matrix             | ➖                            |
+| 🐙 [galtzo-floss/bundle-namespace on GitHub][📜src-gh]   | Another Mirror                                                        | [💚][🤝gh-issues]         | [💚][🤝gh-pulls]         | [💚][📜gh-wiki]           | 💯 Full Matrix           | [💚][gh-discussions]         |
 | 🎮️ [Discord Server][✉️discord-invite]          | [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite] | [Let's][✉️discord-invite] | [talk][✉️discord-invite] | [about][✉️discord-invite] | [this][✉️discord-invite] | [library!][✉️discord-invite] |
 
 </details>
 
-[gh-discussions]: https://github.com/pboling/bundle-namespace/discussions
+[gh-discussions]: https://github.com/galtzo-floss/bundle-namespace/discussions
 
 ### Enterprise Support [![Tidelift](https://tidelift.com/badges/package/rubygems/bundle-namespace)](https://tidelift.com/subscription/pkg/rubygems-bundle-namespace?utm_source=rubygems-bundle-namespace&utm_medium=referral&utm_campaign=readme)
 
@@ -255,7 +255,7 @@ During dependency resolution, the plugin:
 - Tracks namespace information in specifications
 
 ### 3. Lockfile Generation (Phase 3)
-The plugin generates `bundler-namespace-lock.yaml` alongside `Gemfile.lock`:
+The plugin generates `bundle-namespace-lock.yaml` alongside `Gemfile.lock`:
 
 ```yaml
 ---
@@ -397,7 +397,7 @@ end
 
 1. Check if source supports namespaces
 2. Enable warnings: `bundle config set namespace.warn_on_missing true`
-3. Check `bundler-namespace-lock.yaml` was generated
+3. Check `bundle-namespace-lock.yaml` was generated
 
 ### Lockfile Validation Errors
 
@@ -415,7 +415,7 @@ bundle exec ruby -r bundle/namespace -e "
 
 ```bash
 # Remove namespace lockfile
-rm bundler-namespace-lock.yaml
+rm bundle-namespace-lock.yaml
 
 # Clear registry (in Ruby)
 Bundle::Namespace::Registry.clear!
@@ -446,7 +446,7 @@ and [Tidelift][🏙️entsup-tidelift].
 
 ### Open Collective for Individuals
 
-Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/pboling#backer)]
+Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/galtzo-floss#backer)]
 
 NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day, automatically.
 
@@ -456,7 +456,7 @@ No backers yet. Be the first!
 
 ### Open Collective for Organizations
 
-Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor](https://opencollective.com/pboling#sponsor)]
+Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor](https://opencollective.com/galtzo-floss#sponsor)]
 
 NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day, automatically.
 
@@ -464,7 +464,7 @@ NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day
 No sponsors yet. Be the first!
 <!-- OPENCOLLECTIVE-ORGANIZATIONS:END -->
 
-[kettle-readme-backers]: https://github.com/pboling/bundle-namespace/blob/main/exe/kettle-readme-backers
+[kettle-readme-backers]: https://github.com/galtzo-floss/bundle-namespace/blob/main/exe/kettle-readme-backers
 
 ### Another way to support open-source
 
@@ -518,16 +518,16 @@ chat rooms and mailing lists agrees to follow the [![Contributor Covenant 2.1][�
 
 Made with [contributors-img][🖐contrib-rocks].
 
-Also see GitLab Contributors: [https://gitlab.com/pboling/bundle-namespace/-/graphs/main][🚎contributors-gl]
+Also see GitLab Contributors: [https://gitlab.com/galtzo-floss/bundle-namespace/-/graphs/main][🚎contributors-gl]
 
 <details>
     <summary>⭐️ Star History</summary>
 
-<a href="https://star-history.com/#pboling/bundle-namespace&Date">
+<a href="https://star-history.com/#galtzo-floss/bundle-namespace&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=pboling/bundle-namespace&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=pboling/bundle-namespace&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=pboling/bundle-namespace&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=galtzo-floss/bundle-namespace&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=galtzo-floss/bundle-namespace&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=galtzo-floss/bundle-namespace&type=Date" />
  </picture>
 </a>
 
@@ -606,7 +606,7 @@ To join the community or get help 👇️ Join the Discord.
 
 To say "thanks!" ☝️ Join the Discord or 👇️ send money.
 
-[![Sponsor pboling/bundle-namespace on Open Source Collective][🖇osc-all-bottom-img]][🖇osc] 💌 [![Sponsor me on GitHub Sponsors][🖇sponsor-bottom-img]][🖇sponsor] 💌 [![Sponsor me on Liberapay][⛳liberapay-bottom-img]][⛳liberapay-img] 💌 [![Donate on PayPal][🖇paypal-bottom-img]][🖇paypal-img]
+[![Sponsor galtzo-floss/bundle-namespace on Open Source Collective][🖇osc-all-bottom-img]][🖇osc] 💌 [![Sponsor me on GitHub Sponsors][🖇sponsor-bottom-img]][🖇sponsor] 💌 [![Sponsor me on Liberapay][⛳liberapay-bottom-img]][⛳liberapay-img] 💌 [![Donate on PayPal][🖇paypal-bottom-img]][🖇paypal-img]
 
 ### Please give the project a star ⭐ ♥.
 
@@ -618,14 +618,14 @@ Thanks for RTFM. ☺️
 [🖇osc-all-img]: https://img.shields.io/opencollective/all/pboling
 [🖇osc-sponsors-img]: https://img.shields.io/opencollective/sponsors/pboling
 [🖇osc-backers-img]: https://img.shields.io/opencollective/backers/pboling
-[🖇osc-backers]: https://opencollective.com/pboling#backer
-[🖇osc-backers-i]: https://opencollective.com/pboling/backers/badge.svg?style=flat
-[🖇osc-sponsors]: https://opencollective.com/pboling#sponsor
-[🖇osc-sponsors-i]: https://opencollective.com/pboling/sponsors/badge.svg?style=flat
+[🖇osc-backers]: https://opencollective.com/galtzo-floss#backer
+[🖇osc-backers-i]: https://opencollective.com/galtzo-floss/backers/badge.svg?style=flat
+[🖇osc-sponsors]: https://opencollective.com/galtzo-floss#sponsor
+[🖇osc-sponsors-i]: https://opencollective.com/galtzo-floss/sponsors/badge.svg?style=flat
 [🖇osc-all-bottom-img]: https://img.shields.io/opencollective/all/pboling?style=for-the-badge
 [🖇osc-sponsors-bottom-img]: https://img.shields.io/opencollective/sponsors/pboling?style=for-the-badge
 [🖇osc-backers-bottom-img]: https://img.shields.io/opencollective/backers/pboling?style=for-the-badge
-[🖇osc]: https://opencollective.com/pboling
+[🖇osc]: https://opencollective.com/galtzo-floss
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor-bottom-img]: https://img.shields.io/badge/Sponsor_Me!-pboling-blue?style=for-the-badge&logo=github
 [🖇sponsor]: https://github.com/sponsors/pboling
@@ -649,12 +649,12 @@ Thanks for RTFM. ☺️
 [✉️ruby-friends]: https://app.daily.dev/squads/rubyfriends
 
 [✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
-[⛳️gem-namespace]: https://github.com/pboling/bundle-namespace
+[⛳️gem-namespace]: https://github.com/galtzo-floss/bundle-namespace
 [⛳️namespace-img]: https://img.shields.io/badge/namespace-Bundle::Namespace-3C2D2D.svg?style=square&logo=ruby&logoColor=white
 [⛳️gem-name]: https://bestgems.org/gems/bundle-namespace
 [⛳️name-img]: https://img.shields.io/badge/name-bundle--namespace-3C2D2D.svg?style=square&logo=rubygems&logoColor=red
-[⛳️tag-img]: https://img.shields.io/github/tag/pboling/bundle-namespace.svg
-[⛳️tag]: http://github.com/pboling/bundle-namespace/releases
+[⛳️tag-img]: https://img.shields.io/github/tag/galtzo-floss/bundle-namespace.svg
+[⛳️tag]: http://github.com/galtzo-floss/bundle-namespace/releases
 [🚂maint-blog]: http://www.railsbling.com/tags/bundle-namespace
 [🚂maint-blog-img]: https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&logo=rubyonrails&logoColor=orange
 [🚂maint-contact]: http://www.railsbling.com/contact
@@ -689,63 +689,63 @@ Thanks for RTFM. ☺️
 [💁🏼‍♂️peterboling]: http://www.peterboling.com
 [🚂railsbling]: http://www.railsbling.com
 [📜src-gl-img]: https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&logo=Gitlab&logoColor=orange
-[📜src-gl]: https://gitlab.com/pboling/bundle-namespace/
+[📜src-gl]: https://gitlab.com/galtzo-floss/bundle-namespace/
 [📜src-cb-img]: https://img.shields.io/badge/CodeBerg-4893CC?style=for-the-badge&logo=CodeBerg&logoColor=blue
-[📜src-cb]: https://codeberg.org/pboling/bundle-namespace
+[📜src-cb]: https://codeberg.org/galtzo-floss/bundle-namespace
 [📜src-gh-img]: https://img.shields.io/badge/GitHub-238636?style=for-the-badge&logo=Github&logoColor=green
-[📜src-gh]: https://github.com/pboling/bundle-namespace
+[📜src-gh]: https://github.com/galtzo-floss/bundle-namespace
 [📜docs-cr-rd-img]: https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
 [📜docs-head-rd-img]: https://img.shields.io/badge/YARD_on_Galtzo.com-HEAD-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
-[📜gl-wiki]: https://gitlab.com/pboling/bundle-namespace/-/wikis/home
-[📜gh-wiki]: https://github.com/pboling/bundle-namespace/wiki
+[📜gl-wiki]: https://gitlab.com/galtzo-floss/bundle-namespace/-/wikis/home
+[📜gh-wiki]: https://github.com/galtzo-floss/bundle-namespace/wiki
 [📜gl-wiki-img]: https://img.shields.io/badge/wiki-examples-943CD2.svg?style=for-the-badge&logo=gitlab&logoColor=white
 [📜gh-wiki-img]: https://img.shields.io/badge/wiki-examples-943CD2.svg?style=for-the-badge&logo=github&logoColor=white
 [👽dl-rank]: https://bestgems.org/gems/bundle-namespace
 [👽dl-ranki]: https://img.shields.io/gem/rd/bundle-namespace.svg
-[👽oss-help]: https://www.codetriage.com/pboling/bundle-namespace
-[👽oss-helpi]: https://www.codetriage.com/pboling/bundle-namespace/badges/users.svg
+[👽oss-help]: https://www.codetriage.com/galtzo-floss/bundle-namespace
+[👽oss-helpi]: https://www.codetriage.com/galtzo-floss/bundle-namespace/badges/users.svg
 [👽version]: https://bestgems.org/gems/bundle-namespace
 [👽versioni]: https://img.shields.io/gem/v/bundle-namespace.svg
 [🏀qlty-mnt]: https://qlty.sh/gh/pboling/projects/bundle-namespace
 [🏀qlty-mnti]: https://qlty.sh/gh/pboling/projects/bundle-namespace/maintainability.svg
 [🏀qlty-cov]: https://qlty.sh/gh/pboling/projects/bundle-namespace/metrics/code?sort=coverageRating
 [🏀qlty-covi]: https://qlty.sh/gh/pboling/projects/bundle-namespace/coverage.svg
-[🏀codecov]: https://codecov.io/gh/pboling/bundle-namespace
-[🏀codecovi]: https://codecov.io/gh/pboling/bundle-namespace/graph/badge.svg
-[🏀coveralls]: https://coveralls.io/github/pboling/bundle-namespace?branch=main
-[🏀coveralls-img]: https://coveralls.io/repos/github/pboling/bundle-namespace/badge.svg?branch=main
-[🖐codeQL]: https://github.com/pboling/bundle-namespace/security/code-scanning
-[🖐codeQL-img]: https://github.com/pboling/bundle-namespace/actions/workflows/codeql-analysis.yml/badge.svg
-[🚎1-an-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/ancient.yml
-[🚎1-an-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/ancient.yml/badge.svg
-[🚎2-cov-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/coverage.yml
-[🚎2-cov-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/coverage.yml/badge.svg
-[🚎3-hd-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/heads.yml
-[🚎3-hd-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/heads.yml/badge.svg
-[🚎4-lg-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/legacy.yml
-[🚎4-lg-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/legacy.yml/badge.svg
-[🚎5-st-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/style.yml
-[🚎5-st-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/style.yml/badge.svg
-[🚎6-s-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/supported.yml
-[🚎6-s-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/supported.yml/badge.svg
-[🚎7-us-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/unsupported.yml
-[🚎7-us-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/unsupported.yml/badge.svg
-[🚎8-ho-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/hoary.yml
-[🚎8-ho-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/hoary.yml/badge.svg
-[🚎9-t-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/truffle.yml
-[🚎9-t-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/truffle.yml/badge.svg
-[🚎10-j-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/jruby.yml
-[🚎10-j-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/jruby.yml/badge.svg
-[🚎11-c-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/current.yml
-[🚎11-c-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/current.yml/badge.svg
-[🚎12-crh-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/dep-heads.yml
-[🚎12-crh-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/dep-heads.yml/badge.svg
-[🚎13-🔒️-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/locked_deps.yml
-[🚎13-🔒️-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/locked_deps.yml/badge.svg
-[🚎14-🔓️-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/unlocked_deps.yml
-[🚎14-🔓️-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/unlocked_deps.yml/badge.svg
-[🚎15-🪪-wf]: https://github.com/pboling/bundle-namespace/actions/workflows/license-eye.yml
-[🚎15-🪪-wfi]: https://github.com/pboling/bundle-namespace/actions/workflows/license-eye.yml/badge.svg
+[🏀codecov]: https://codecov.io/gh/galtzo-floss/bundle-namespace
+[🏀codecovi]: https://codecov.io/gh/galtzo-floss/bundle-namespace/graph/badge.svg
+[🏀coveralls]: https://coveralls.io/github/galtzo-floss/bundle-namespace?branch=main
+[🏀coveralls-img]: https://coveralls.io/repos/github/galtzo-floss/bundle-namespace/badge.svg?branch=main
+[🖐codeQL]: https://github.com/galtzo-floss/bundle-namespace/security/code-scanning
+[🖐codeQL-img]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/codeql-analysis.yml/badge.svg
+[🚎1-an-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/ancient.yml
+[🚎1-an-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/ancient.yml/badge.svg
+[🚎2-cov-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/coverage.yml
+[🚎2-cov-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/coverage.yml/badge.svg
+[🚎3-hd-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/heads.yml
+[🚎3-hd-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/heads.yml/badge.svg
+[🚎4-lg-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/legacy.yml
+[🚎4-lg-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/legacy.yml/badge.svg
+[🚎5-st-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/style.yml
+[🚎5-st-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/style.yml/badge.svg
+[🚎6-s-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/supported.yml
+[🚎6-s-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/supported.yml/badge.svg
+[🚎7-us-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/unsupported.yml
+[🚎7-us-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/unsupported.yml/badge.svg
+[🚎8-ho-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/hoary.yml
+[🚎8-ho-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/hoary.yml/badge.svg
+[🚎9-t-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/truffle.yml
+[🚎9-t-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/truffle.yml/badge.svg
+[🚎10-j-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/jruby.yml
+[🚎10-j-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/jruby.yml/badge.svg
+[🚎11-c-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/current.yml
+[🚎11-c-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/current.yml/badge.svg
+[🚎12-crh-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/dep-heads.yml
+[🚎12-crh-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/dep-heads.yml/badge.svg
+[🚎13-🔒️-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/locked_deps.yml
+[🚎13-🔒️-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/locked_deps.yml/badge.svg
+[🚎14-🔓️-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/unlocked_deps.yml
+[🚎14-🔓️-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/unlocked_deps.yml/badge.svg
+[🚎15-🪪-wf]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/license-eye.yml
+[🚎15-🪪-wfi]: https://github.com/galtzo-floss/bundle-namespace/actions/workflows/license-eye.yml/badge.svg
 [💎ruby-2.7i]: https://img.shields.io/badge/Ruby-2.7-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.0i]: https://img.shields.io/badge/Ruby-3.0-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.1i]: https://img.shields.io/badge/Ruby-3.1-CC342D?style=for-the-badge&logo=ruby&logoColor=white
@@ -764,19 +764,19 @@ Thanks for RTFM. ☺️
 [💎jruby-9.4i]: https://img.shields.io/badge/JRuby-9.4-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-c-i]: https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&logo=ruby&logoColor=green
 [💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=blue
-[🤝gh-issues]: https://github.com/pboling/bundle-namespace/issues
-[🤝gh-pulls]: https://github.com/pboling/bundle-namespace/pulls
-[🤝gl-issues]: https://gitlab.com/pboling/bundle-namespace/-/issues
-[🤝gl-pulls]: https://gitlab.com/pboling/bundle-namespace/-/merge_requests
-[🤝cb-issues]: https://codeberg.org/pboling/bundle-namespace/issues
-[🤝cb-pulls]: https://codeberg.org/pboling/bundle-namespace/pulls
+[🤝gh-issues]: https://github.com/galtzo-floss/bundle-namespace/issues
+[🤝gh-pulls]: https://github.com/galtzo-floss/bundle-namespace/pulls
+[🤝gl-issues]: https://gitlab.com/galtzo-floss/bundle-namespace/-/issues
+[🤝gl-pulls]: https://gitlab.com/galtzo-floss/bundle-namespace/-/merge_requests
+[🤝cb-issues]: https://codeberg.org/galtzo-floss/bundle-namespace/issues
+[🤝cb-pulls]: https://codeberg.org/galtzo-floss/bundle-namespace/pulls
 [🤝cb-donate]: https://donate.codeberg.org/
 [🤝contributing]: CONTRIBUTING.md
-[🏀codecov-g]: https://codecov.io/gh/pboling/bundle-namespace/graphs/tree.svg
+[🏀codecov-g]: https://codecov.io/gh/galtzo-floss/bundle-namespace/graphs/tree.svg
 [🖐contrib-rocks]: https://contrib.rocks
-[🖐contributors]: https://github.com/pboling/bundle-namespace/graphs/contributors
-[🖐contributors-img]: https://contrib.rocks/image?repo=pboling/bundle-namespace
-[🚎contributors-gl]: https://gitlab.com/pboling/bundle-namespace/-/graphs/main
+[🖐contributors]: https://github.com/galtzo-floss/bundle-namespace/graphs/contributors
+[🖐contributors-img]: https://contrib.rocks/image?repo=galtzo-floss/bundle-namespace
+[🚎contributors-gl]: https://gitlab.com/galtzo-floss/bundle-namespace/-/graphs/main
 [🪇conduct]: CODE_OF_CONDUCT.md
 [🪇conduct-img]: https://img.shields.io/badge/Contributor_Covenant-2.1-259D6C.svg
 [📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
@@ -804,7 +804,7 @@ Thanks for RTFM. ☺️
 [🚎yard-current]: http://rubydoc.info/gems/bundle-namespace
 [🚎yard-head]: https://bundle-namespace.galtzo.com
 [💎stone_checksums]: https://github.com/galtzo-floss/stone_checksums
-[💎SHA_checksums]: https://gitlab.com/pboling/bundle-namespace/-/tree/main/checksums
+[💎SHA_checksums]: https://gitlab.com/galtzo-floss/bundle-namespace/-/tree/main/checksums
 [💎rlts]: https://github.com/rubocop-lts/rubocop-lts
 [💎rlts-img]: https://img.shields.io/badge/code_style_&_linting-rubocop--lts-34495e.svg?plastic&logo=ruby&logoColor=white
 [💎appraisal2]: https://github.com/appraisal-rb/appraisal2

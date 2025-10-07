@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "🍕 Bundler plugin that adds namespace support for gem resolution"
   spec.description = "Extends Bundler's DSL with a namespace macro to support organization-scoped and user-scoped gem repositories, enabling differentiation between multiple flavors of the same gem from namespace-aware sources."
-  spec.homepage = "https://github.com/pboling/bundle-namespace"
+  spec.homepage = "https://github.com/galtzo-floss/bundle-namespace"
   spec.licenses = ["MIT"]
   spec.required_ruby_version = ">= 2.7.0"
 

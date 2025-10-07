@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   File: PHASE_4_SUMMARY
-  
+
     &mdash; Documentation by YARD 0.9.37
-  
+
 </title>
 
   <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -35,14 +35,14 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
-  
-    <a href="_index.html">Index</a> &raquo; 
+
+    <a href="_index.html">Index</a> &raquo;
     <span class="title">File: PHASE_4_SUMMARY</span>
-  
+
 </div>
 
         <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
 
@@ -52,7 +52,7 @@
           <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
         </svg>
     </a>
-  
+
 </div>
         <div class="clear"></div>
       </div>
@@ -79,7 +79,7 @@
 <p><strong>Key Features:</strong></p>
 <ul>
   <li>
-<strong>Auto-load lockfile</strong> - Reads <code>bundler-namespace-lock.yaml</code> before resolution</li>
+<strong>Auto-load lockfile</strong> - Reads <code>bundle-namespace-lock.yaml</code> before resolution</li>
   <li>
 <strong>Auto-generate lockfile</strong> - Writes namespace lockfile after <code>bundle install</code>
 </li>
@@ -92,13 +92,13 @@
 <p><strong>Integration Points:</strong></p>
 <pre class="code language-ruby"><code class="language-ruby"># Before resolution - load namespace lockfile
 Bundler::Dsl#to_definition
-  → loads bundler-namespace-lock.yaml
+  → loads bundle-namespace-lock.yaml
   → populates registry
   → validates consistency
 
-# After resolution - generate namespace lockfile  
+# After resolution - generate namespace lockfile
 Bundler::Definition#lock
-  → generates bundler-namespace-lock.yaml
+  → generates bundle-namespace-lock.yaml
   → reports success/failure
 </code></pre>
 
@@ -235,11 +235,11 @@ $ bundle install
 
 # Plugin automatically:
 # 1. Parses namespace declarations (Phase 1)
-# 2. Resolves with namespace awareness (Phase 2)  
-# 3. Generates bundler-namespace-lock.yaml (Phase 3)
-# 4. Reports: &quot;Namespace lockfile written to bundler-namespace-lock.yaml&quot; (Phase 4) ✨
+# 2. Resolves with namespace awareness (Phase 2)
+# 3. Generates bundle-namespace-lock.yaml (Phase 3)
+# 4. Reports: &quot;Namespace lockfile written to bundle-namespace-lock.yaml&quot; (Phase 4) ✨
 
-# Result: Both Gemfile.lock and bundler-namespace-lock.yaml created
+# Result: Both Gemfile.lock and bundle-namespace-lock.yaml created
 </code></pre>
 
 <h3 id="subsequent-bundle-install">Subsequent Bundle Install</h3>
@@ -248,7 +248,7 @@ $ bundle install
 $ bundle install
 
 # Plugin automatically:
-# 1. Loads bundler-namespace-lock.yaml (Phase 4) ✨
+# 1. Loads bundle-namespace-lock.yaml (Phase 4) ✨
 # 2. Populates registry with namespace info
 # 3. Validates consistency
 # 4. Uses locked namespace versions
@@ -342,7 +342,7 @@ source &#39;https://gems.mycompany.com&#39; do
   namespace :engineering do
     gem &#39;internal-tools&#39;, &#39;~&gt; 1.5&#39;
   end
-  
+
   namespace :security do
     gem &#39;internal-tools&#39;, &#39;~&gt; 2.0&#39;
   end
@@ -358,7 +358,7 @@ end
 #    - Stores in Registry
 
 # 2. PHASE 4: Load Lockfile (if exists)
-#    - Reads bundler-namespace-lock.yaml
+#    - Reads bundle-namespace-lock.yaml
 #    - Populates registry from lockfile
 #    - Validates consistency
 
@@ -369,16 +369,16 @@ end
 #    - Resolves: v1.5.2 for engineering, v2.0.1 for security
 
 # 4. PHASE 3: Generate Lockfile
-#    - Creates bundler-namespace-lock.yaml
+#    - Creates bundle-namespace-lock.yaml
 #    - Three-level structure: source → namespace → gems
 #    - Includes version, dependencies, platform
 
 # 5. PHASE 4: Report Success
-#    - &quot;Namespace lockfile written to bundler-namespace-lock.yaml&quot;
+#    - &quot;Namespace lockfile written to bundle-namespace-lock.yaml&quot;
 #    - User sees success message
 
 # ========================================
-# GENERATED: bundler-namespace-lock.yaml
+# GENERATED: bundle-namespace-lock.yaml
 # ========================================
 # ---
 # &quot;https://gems.mycompany.com&quot;:
@@ -592,7 +592,7 @@ gem &#39;internal-tools&#39;, &#39;~&gt; 2.0&#39;  # ERROR: duplicate gem declar
 
 <h4 id="2-namespace-lockfile-new">2. Namespace Lockfile (New)</h4>
 
-<p>The <code>bundler-namespace-lock.yaml</code> adds the missing dimension - which namespace each gem belongs to:</p>
+<p>The <code>bundle-namespace-lock.yaml</code> adds the missing dimension - which namespace each gem belongs to:</p>
 
 <pre class="code language-yaml"><code class="language-yaml">---
 &quot;https://gems.mycompany.com&quot;:
@@ -615,7 +615,7 @@ gem &#39;internal-tools&#39;, &#39;~&gt; 2.0&#39;  # ERROR: duplicate gem declar
   namespace :engineering do
     gem &#39;internal-tools&#39;, &#39;~&gt; 1.5&#39;  # Internally: engineering/internal-tools
   end
-  
+
   namespace :security do
     gem &#39;internal-tools&#39;, &#39;~&gt; 2.0&#39;  # Internally: security/internal-tools
   end
@@ -636,7 +636,7 @@ end
 <pre class="code language-ruby"><code class="language-ruby"># For namespace-aware sources (detected automatically)
 def fetch_gem(spec, options = {})
   namespace = gem_namespace_for_spec(spec)
-  
+
   if namespace &amp;&amp; namespace_aware?
     # Fetches from: https://gems.mycompany.com/engineering/gems/internal-tools-1.5.2.gem
     fetch_namespaced_gem(spec, namespace, options)
@@ -652,7 +652,7 @@ end
 def filter_versions_by_namespace(package, versions)
   namespace = @namespace_packages&amp;.dig(package)
   return versions unless namespace
-  
+
   # Only versions matching this namespace are considered
   versions.select { |v| version_matches_namespace?(v, namespace) }
 end
@@ -747,7 +747,7 @@ source &#39;https://gems.mycompany.com&#39; do
     gem &#39;internal-tools&#39;, &#39;~&gt; 1.5&#39;
     gem &#39;shared-lib&#39;, &#39;~&gt; 2.0&#39;
   end
-  
+
   namespace :security do
     gem &#39;internal-tools&#39;, &#39;~&gt; 2.0&#39;
     gem &#39;security-scanner&#39;, &#39;~&gt; 1.0&#39;
@@ -771,7 +771,7 @@ end
     shared-lib (2.0.1)
 </code></pre>
 
-<p><strong>bundler-namespace-lock.yaml contains:</strong></p>
+<p><strong>bundle-namespace-lock.yaml contains:</strong></p>
 <pre class="code language-yaml"><code class="language-yaml">&quot;https://gems.mycompany.com&quot;:
   engineering:
     internal-tools:
@@ -830,7 +830,7 @@ source &#39;https://gems.mycompany.com&#39; do
     gem &#39;internal-tools&#39;, &#39;~&gt; 1.5&#39;
     gem &#39;tool-a&#39;  # depends on internal-tools ~&gt; 1.5
   end
-  
+
   namespace :security do
     gem &#39;internal-tools&#39;, &#39;~&gt; 2.0&#39;
     gem &#39;tool-b&#39;  # depends on internal-tools ~&gt; 2.0
@@ -846,7 +846,7 @@ end
 
 <p><strong>2. Namespace Tracking for Future Enhancements</strong></p>
 
-<p>The <code>bundler-namespace-lock.yaml</code> tracks which gems were intended for which namespaces. This enables:</p>
+<p>The <code>bundle-namespace-lock.yaml</code> tracks which gems were intended for which namespaces. This enables:</p>
 
 <ul>
   <li>
@@ -899,7 +899,7 @@ source &#39;https://gems.mycompany.com&#39; do
       gem &#39;internal-tools&#39;, &#39;~&gt; 1.5&#39;
     end
   end
-  
+
   group :security do
     namespace :security do
       gem &#39;internal-tools&#39;, &#39;~&gt; 2.0&#39;
@@ -996,7 +996,7 @@ source &#39;https://gems.mycompany.com&#39; do
     gem &#39;engineering-tools&#39;, &#39;~&gt; 1.5&#39;  # Unique names
     gem &#39;shared-logger&#39;, &#39;~&gt; 2.0&#39;      # Shared dependency
   end
-  
+
   namespace :security do
     gem &#39;security-scanner&#39;, &#39;~&gt; 2.0&#39;   # Unique names
     gem &#39;shared-logger&#39;, &#39;~&gt; 2.0&#39;      # Same version (compatible)

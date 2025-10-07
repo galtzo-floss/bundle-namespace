@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   File: PRD
-  
+
     &mdash; Documentation by YARD 0.9.37
-  
+
 </title>
 
   <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -35,14 +35,14 @@
     <div id="main" tabindex="-1">
       <div id="header">
         <div id="menu">
-  
-    <a href="_index.html">Index</a> &raquo; 
+
+    <a href="_index.html">Index</a> &raquo;
     <span class="title">File: PRD</span>
-  
+
 </div>
 
         <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
 
@@ -52,7 +52,7 @@
           <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
         </svg>
     </a>
-  
+
 </div>
         <div class="clear"></div>
       </div>
@@ -234,11 +234,11 @@ end
 <strong>Namespace Hints</strong>: Consider adding namespace comments (optional, if safe)</li>
 </ul>
 
-<h4 id="32-secondary-lockfile-bundler-namespace-lockyaml">3.2 Secondary Lockfile (bundler-namespace-lock.yaml)</h4>
+<h4 id="32-secondary-lockfile-bundle-namespace-lockyaml">3.2 Secondary Lockfile (bundle-namespace-lock.yaml)</h4>
 
 <p>Create a new YAML-based lockfile structure:</p>
 
-<pre class="code language-yaml"><code class="language-yaml"># bundler-namespace-lock.yaml
+<pre class="code language-yaml"><code class="language-yaml"># bundle-namespace-lock.yaml
 ---
 &quot;https://rubygems.org&quot;:
   myorg:
@@ -289,7 +289,7 @@ end
 <ul>
   <li>Read and validate YAML structure</li>
   <li>Merge namespace information during dependency resolution</li>
-  <li>Validate consistency between Gemfile, Gemfile.lock, and bundler-namespace-lock.yaml</li>
+  <li>Validate consistency between Gemfile, Gemfile.lock, and bundle-namespace-lock.yaml</li>
 </ul>
 
 <h3 id="4-plugin-architecture">4. Plugin Architecture</h3>
@@ -357,7 +357,7 @@ end
       ensure
         namespaces.each { @namespaces.pop }
       end
-      
+
       # Override add_dependency to include namespace
       def add_dependency(name, version = nil, options = {})
         options[&quot;namespace&quot;] = @namespaces.last if @namespaces&amp;.any?
@@ -381,14 +381,14 @@ Bundler::Dsl.prepend(Bundle::Namespace::DslExtension)
         # Filter/transform specs based on namespace
         apply_namespace_filtering(index)
       end
-      
+
       def namespace_aware?
         # Check if source supports namespaces
         # Could be via HTTP header, API endpoint, etc.
       end
-      
+
       private
-      
+
       def apply_namespace_filtering(index)
         # Implementation details
       end
@@ -409,9 +409,9 @@ Bundler::Source::Rubygems.prepend(Bundle::Namespace::SourceRubygemsExtension)
         enhance_with_namespace_awareness(result)
         result
       end
-      
+
       private
-      
+
       def enhance_with_namespace_awareness(solver_components)
         # Modify package identification to include namespace
       end
@@ -446,11 +446,11 @@ Bundler::Resolver.prepend(Bundle::Namespace::ResolverExtension)
     class Registry
       # Maps: source_uri =&gt; namespace =&gt; [gem_names]
       @namespaces = Hash.new { |h, k| h[k] = Hash.new { |h2, k2| h2[k2] = [] } }
-      
+
       def self.register(source, namespace, gem_name)
         @namespaces[source.to_s][namespace.to_s] &lt;&lt; gem_name
       end
-      
+
       def self.gems_for(source, namespace)
         @namespaces[source.to_s][namespace.to_s]
       end

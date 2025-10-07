@@ -158,7 +158,7 @@ Your picture could be here!
 
 Made with [contributors-img][🖐contrib-rocks].
 
-Also see GitLab Contributors: [https://gitlab.com/pboling/bundle-namespace/-/graphs/main][🚎contributors-gl]
+Also see GitLab Contributors: [https://gitlab.com/galtzo-floss/bundle-namespace/-/graphs/main][🚎contributors-gl]
 
 ## For Maintainers
 
@@ -207,15 +207,15 @@ NOTE: To build without signing the gem set `SKIP_GEM_SIGNING` to any value in th
 13. Run `bundle exec rake release` which will create a git tag for the version,
     push git commits and tags, and push the `.gem` file to the gem host configured in the gemspec.
 
-[📜src-gl]: https://gitlab.com/pboling/bundle-namespace/
-[📜src-cb]: https://codeberg.org/pboling/bundle-namespace
-[📜src-gh]: https://github.com/pboling/bundle-namespace
-[🧪build]: https://github.com/pboling/bundle-namespace/actions
-[🤝conduct]: https://gitlab.com/pboling/bundle-namespace/-/blob/main/CODE_OF_CONDUCT.md
+[📜src-gl]: https://gitlab.com/galtzo-floss/bundle-namespace/
+[📜src-cb]: https://codeberg.org/galtzo-floss/bundle-namespace
+[📜src-gh]: https://github.com/galtzo-floss/bundle-namespace
+[🧪build]: https://github.com/galtzo-floss/bundle-namespace/actions
+[🤝conduct]: https://gitlab.com/galtzo-floss/bundle-namespace/-/blob/main/CODE_OF_CONDUCT.md
 [🖐contrib-rocks]: https://contrib.rocks
-[🖐contributors]: https://github.com/pboling/bundle-namespace/graphs/contributors
-[🚎contributors-gl]: https://gitlab.com/pboling/bundle-namespace/-/graphs/main
-[🖐contributors-img]: https://contrib.rocks/image?repo=pboling/bundle-namespace
+[🖐contributors]: https://github.com/galtzo-floss/bundle-namespace/graphs/contributors
+[🚎contributors-gl]: https://gitlab.com/galtzo-floss/bundle-namespace/-/graphs/main
+[🖐contributors-img]: https://contrib.rocks/image?repo=galtzo-floss/bundle-namespace
 [💎gem-coop]: https://gem.coop
 [🔒️rubygems-security-guide]: https://guides.rubygems.org/security/#building-gems
 [🔒️rubygems-checksums-pr]: https://github.com/rubygems/rubygems/pull/6022

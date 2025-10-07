@@ -15,7 +15,7 @@ We have successfully completed **Phase 3: Lockfile Generation** of the Bundle::N
 
 ### 1. **Lockfile Generator** (`lib/bundle/namespace/lockfile_generator.rb`)
 
-Generates the `bundler-namespace-lock.yaml` file with a three-level structure:
+Generates the `bundle-namespace-lock.yaml` file with a three-level structure:
 
 **Key Methods:**
 - **`#generate`** - Generates YAML content from registry
@@ -44,7 +44,7 @@ Generates the `bundler-namespace-lock.yaml` file with a three-level structure:
 
 ### 2. **Lockfile Parser** (`lib/bundle/namespace/lockfile_parser.rb`)
 
-Parses and extracts data from `bundler-namespace-lock.yaml`:
+Parses and extracts data from `bundle-namespace-lock.yaml`:
 
 **Key Methods:**
 - **`#parse`** - Parses YAML and validates structure
@@ -150,7 +150,7 @@ end
 # Phase 3: Generate lockfile
 generator = Bundle::Namespace::LockfileGenerator.new(definition)
 generator.generate!
-# ↓ Creates bundler-namespace-lock.yaml
+# ↓ Creates bundle-namespace-lock.yaml
 
 # Later: Parse lockfile
 parser = Bundle::Namespace::LockfileParser.new
@@ -181,7 +181,7 @@ source "https://gems.mycompany.com" do
   end
 end
 
-# After bundle install, bundler-namespace-lock.yaml is created:
+# After bundle install, bundle-namespace-lock.yaml is created:
 # ---
 # "https://gems.mycompany.com":
 #   engineering:
@@ -199,7 +199,7 @@ end
 #       platform: ruby
 
 # On subsequent bundle install:
-# 1. Parser reads bundler-namespace-lock.yaml
+# 1. Parser reads bundle-namespace-lock.yaml
 # 2. Populates registry with namespace info
 # 3. Validator checks consistency
 # 4. Resolution uses locked versions
@@ -234,7 +234,7 @@ lib/bundle/namespace.rb        (require Phase 3 modules)
 
 ## Lockfile Format Specification
 
-The `bundler-namespace-lock.yaml` follows this structure:
+The `bundle-namespace-lock.yaml` follows this structure:
 
 ```yaml
 ---
@@ -299,7 +299,7 @@ The `bundler-namespace-lock.yaml` follows this structure:
 
 2. **Before dependency resolution:**
    ```ruby
-   if File.exist?("bundler-namespace-lock.yaml")
+   if File.exist?("bundle-namespace-lock.yaml")
      parser = Bundle::Namespace::LockfileParser.new
      parser.populate_registry!
    end
@@ -333,7 +333,7 @@ Phase 3 is complete. Ready for final phase:
 
 **Phase 3 is complete and fully tested.** We've successfully implemented lockfile generation and validation for namespace dependencies. The plugin now:
 
-- ✅ Generates `bundler-namespace-lock.yaml` with proper structure
+- ✅ Generates `bundle-namespace-lock.yaml` with proper structure
 - ✅ Parses lockfile and restores namespace information
 - ✅ Validates lockfile consistency with helpful error messages
 - ✅ Integrates seamlessly with Phases 1 & 2

@@ -35,7 +35,7 @@ module Bundle
         #
         # @return [String]
         def lockfile_path
-          @lockfile_path ||= bundler_config_value("namespace.lockfile_path", "bundler-namespace-lock.yaml")
+          @lockfile_path ||= bundler_config_value("namespace.lockfile_path", "bundle-namespace-lock.yaml")
         end
 
         # Set lockfile path

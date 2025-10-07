@@ -44,8 +44,8 @@ RSpec.describe Bundle::Namespace::Configuration do
   end
 
   describe ".lockfile_path" do
-    it "defaults to bundler-namespace-lock.yaml" do
-      expect(described_class.lockfile_path).to eq("bundler-namespace-lock.yaml")
+    it "defaults to bundle-namespace-lock.yaml" do
+      expect(described_class.lockfile_path).to eq("bundle-namespace-lock.yaml")
     end
 
     it "can be set to a custom path" do
@@ -64,7 +64,7 @@ RSpec.describe Bundle::Namespace::Configuration do
 
       expect(described_class.strict_mode?).to be false
       expect(described_class.warn_on_missing?).to be true
-      expect(described_class.lockfile_path).to eq("bundler-namespace-lock.yaml")
+      expect(described_class.lockfile_path).to eq("bundle-namespace-lock.yaml")
     end
   end
 end

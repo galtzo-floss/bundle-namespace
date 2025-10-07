@@ -136,12 +136,12 @@ Extend `Bundler::Dependency` (`bundler/lib/bundler/dependency.rb`):
 - **No Breaking Changes**: Maintain 100% backward compatibility
 - **Namespace Hints**: Consider adding namespace comments (optional, if safe)
 
-#### 3.2 Secondary Lockfile (bundler-namespace-lock.yaml)
+#### 3.2 Secondary Lockfile (bundle-namespace-lock.yaml)
 
 Create a new YAML-based lockfile structure:
 
 ```yaml
-# bundler-namespace-lock.yaml
+# bundle-namespace-lock.yaml
 ---
 "https://rubygems.org":
   myorg:
@@ -183,7 +183,7 @@ Create lockfile parser for namespace lockfile:
 
 - Read and validate YAML structure
 - Merge namespace information during dependency resolution
-- Validate consistency between Gemfile, Gemfile.lock, and bundler-namespace-lock.yaml
+- Validate consistency between Gemfile, Gemfile.lock, and bundle-namespace-lock.yaml
 
 ### 4. Plugin Architecture
 

@@ -4,7 +4,7 @@ require "yaml"
 
 module Bundle
   module Namespace
-    # Parses the bundler-namespace-lock.yaml file
+    # Parses the bundle-namespace-lock.yaml file
     class LockfileParser
       attr_reader :lockfile_path, :data
 

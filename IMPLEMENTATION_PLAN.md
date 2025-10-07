@@ -73,7 +73,7 @@ This implementation plan breaks down the Bundle::Namespace plugin development in
 ### 3.1 Lockfile Generator
 - [ ] `lib/bundle/namespace/lockfile_generator.rb`
   - [ ] Create YAML structure (source -> namespace -> gem)
-  - [ ] Generate bundler-namespace-lock.yaml
+  - [ ] Generate bundle-namespace-lock.yaml
   - [ ] Hook into Bundler's lockfile generation
 
 ### 3.2 Lockfile Parser
@@ -234,7 +234,7 @@ spec.add_development_dependency("yard", "~> 0.9")
 - [ ] Namespace conflicts are detected
 
 ### Phase 3
-- [ ] bundler-namespace-lock.yaml is generated
+- [ ] bundle-namespace-lock.yaml is generated
 - [ ] Lockfile is parsed correctly
 - [ ] Validation detects inconsistencies
 
