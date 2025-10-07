@@ -89,4 +89,3 @@ RSpec.describe Bundle::Namespace::DependencyExtension do
     end
   end
 end
-

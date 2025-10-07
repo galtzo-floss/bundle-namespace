@@ -181,4 +181,3 @@ RSpec.describe Bundle::Namespace::LockfileValidator do
     end
   end
 end
-

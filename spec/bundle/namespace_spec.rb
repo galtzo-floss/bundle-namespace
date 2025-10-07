@@ -2,7 +2,7 @@
 
 RSpec.describe Bundle::Namespace do
   it "has a version number" do
-    expect(Bundle::Namespace::VERSION).not_to be nil
+    expect(Bundle::Namespace::VERSION).not_to be_nil
   end
 
   it "loads all core components" do

@@ -94,13 +94,13 @@ module Bundle
 
         @namespace_conflicts << {
           gem: gem_name,
-          namespaces: namespaces
+          namespaces: namespaces,
         }
 
         if Configuration.strict_mode?
           raise NamespaceConflictError.new(gem_name, namespaces.first, namespaces.last)
         elsif Configuration.warn_on_missing?
-          Bundler.ui.warn "Warning: Gem '#{gem_name}' requested from multiple namespaces: #{namespaces.join(', ')}"
+          Bundler.ui.warn("Warning: Gem '#{gem_name}' requested from multiple namespaces: #{namespaces.join(", ")}")
         end
       end
 
@@ -113,4 +113,3 @@ module Bundle
     end
   end
 end
-

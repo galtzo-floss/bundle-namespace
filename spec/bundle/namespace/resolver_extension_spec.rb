@@ -44,4 +44,3 @@ RSpec.describe Bundle::Namespace::ResolverExtension do
     end
   end
 end
-

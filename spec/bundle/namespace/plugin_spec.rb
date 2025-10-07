@@ -26,4 +26,3 @@ RSpec.describe Bundle::Namespace::Plugin do
     end
   end
 end
-

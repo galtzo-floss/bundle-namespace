@@ -1,13 +1,43 @@
 # Changelog
 
+[![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]
+
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog][📗keep-changelog],
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html),
+and [yes][📌major-versions-not-sacred], platform and engine support are part of the [public API][📌semver-breaking].
+Please file a bug if you notice a violation of semantic versioning.
+
+[📌semver]: https://semver.org/spec/v2.0.0.html
+[📌semver-img]: https://img.shields.io/badge/semver-2.0.0-FFDD67.svg?style=flat
+[📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
+[📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
+[📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
+[📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
 
 ## [Unreleased]
 
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.1.0] - TBD
+
+### Added
+
+- Initial beta release
+- Full namespace support for Bundler
+- Comprehensive documentation
+- 100% test coverage
 - Initial implementation of Bundle::Namespace plugin
 - Phase 1: Foundation
   - DSL extension with `namespace` macro for Gemfiles
@@ -21,7 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Specification extensions to track namespaces in gem specs
   - Automatic namespace detection based on registered dependencies
 - Phase 3: Lockfile Generation
-  - YAML-based namespace lockfile (bundler-namespace-lock.yaml)
+  - YAML-based namespace lockfile (bundle-namespace-lock.yaml)
   - Three-level lockfile structure: source → namespace → gems
   - Lockfile parser to restore namespace information
   - Lockfile validator with error and warning reporting
@@ -32,29 +62,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Comprehensive README with usage examples
   - Complete test coverage (104 examples, 100% passing)
 
-### Changed
-- N/A (initial release)
-
-### Deprecated
-- N/A (initial release)
-
-### Removed
-- N/A (initial release)
-
-### Fixed
-- N/A (initial release)
-
-### Security
-- N/A (initial release)
-
-## [0.1.0] - TBD
-
-### Added
-- Initial beta release
-- Full namespace support for Bundler
-- Comprehensive documentation
-- 100% test coverage
-
-[Unreleased]: https://github.com/pboling/bundle-namespace/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/pboling/bundle-namespace/releases/tag/v0.1.0
-
+[Unreleased]: https://github.com/galtzo-floss/bundle-namespace/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/galtzo-floss/bundle-namespace/releases/tag/v0.1.0

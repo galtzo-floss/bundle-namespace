@@ -60,17 +60,17 @@ module Bundle
         return unless ui
 
         if @errors.any?
-          ui.error "Namespace lockfile validation errors:"
-          @errors.each { |error| ui.error "  - #{error}" }
+          ui.error("Namespace lockfile validation errors:")
+          @errors.each { |error| ui.error("  - #{error}") }
         end
 
         if @warnings.any?
-          ui.warn "Namespace lockfile validation warnings:"
-          @warnings.each { |warning| ui.warn "  - #{warning}" }
+          ui.warn("Namespace lockfile validation warnings:")
+          @warnings.each { |warning| ui.warn("  - #{warning}") }
         end
 
         if @errors.empty? && @warnings.empty?
-          ui.info "Namespace lockfile is valid"
+          ui.info("Namespace lockfile is valid")
         end
       end
 
@@ -78,11 +78,9 @@ module Bundle
 
       # Validate basic lockfile structure
       def validate_structure
-        begin
-          @parser.parse
-        rescue InvalidNamespaceLockfileError => e
-          @errors << "Invalid lockfile structure: #{e.message}"
-        end
+        @parser.parse
+      rescue InvalidNamespaceLockfileError => e
+        @errors << "Invalid lockfile structure: #{e.message}"
       end
 
       # Validate lockfile against current registry
@@ -155,7 +153,7 @@ require "yaml"
 
 module Bundle
   module Namespace
-    # Generates the bundler-namespace-lock.yaml file
+    # Generates the bundle-namespace-lock.yaml file
     class LockfileGenerator
       attr_reader :definition, :lockfile_path
 
@@ -187,7 +185,7 @@ module Bundle
 
         true
       rescue StandardError => e
-        Bundler.ui.warn "Failed to write namespace lockfile: #{e.message}" if defined?(Bundler)
+        Bundler.ui.warn("Failed to write namespace lockfile: #{e.message}") if defined?(Bundler)
         false
       end
 
@@ -235,12 +233,12 @@ module Bundle
         # Try to find the gem in the resolved specs
         spec = find_spec_for_gem(gem_name)
 
-        return nil unless spec
+        return unless spec
 
         {
           "version" => spec.version.to_s,
           "dependencies" => extract_dependencies(spec),
-          "platform" => spec.platform.to_s
+          "platform" => spec.platform.to_s,
         }
       end
 
@@ -249,7 +247,7 @@ module Bundle
       # @param gem_name [String]
       # @return [Gem::Specification, nil]
       def find_spec_for_gem(gem_name)
-        return nil unless defined?(@definition) && @definition
+        return unless defined?(@definition) && @definition
 
         # Try to find in resolved specs
         if @definition.respond_to?(:resolve)
@@ -284,4 +282,3 @@ module Bundle
     end
   end
 end
-

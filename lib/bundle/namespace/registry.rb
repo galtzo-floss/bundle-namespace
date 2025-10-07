@@ -58,7 +58,7 @@ module Bundle
           source_key = normalize_source(source)
           found_namespaces = namespaces[source_key].select { |_ns, gems| gems.include?(gem_name) }.keys
 
-          return nil if found_namespaces.empty?
+          return if found_namespaces.empty?
           return found_namespaces.first if found_namespaces.size == 1
 
           # Multiple namespaces found - this is an error condition
@@ -114,4 +114,3 @@ module Bundle
     end
   end
 end
-

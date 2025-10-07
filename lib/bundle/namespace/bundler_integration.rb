@@ -20,7 +20,7 @@ module Bundle
         def setup_install_hooks
           # Hook after Gemfile evaluation to populate registry from lockfile
           Bundler::Dsl.class_eval do
-            alias_method :original_to_definition, :to_definition
+            alias_method(:original_to_definition, :to_definition)
 
             def to_definition(lockfile, unlock)
               # Load namespace lockfile before resolution if it exists
@@ -33,7 +33,7 @@ module Bundle
           # Hook after resolution to generate namespace lockfile
           if defined?(Bundler::Definition)
             Bundler::Definition.class_eval do
-              alias_method :original_lock, :lock
+              alias_method(:original_lock, :lock)
 
               def lock(file, preserve_unknown_sections = false)
                 result = original_lock(file, preserve_unknown_sections)
@@ -72,7 +72,7 @@ module Bundle
             validator.report(Bundler.ui) if validator.warnings.any?
           end
         rescue StandardError => e
-          Bundler.ui.warn "Failed to load namespace lockfile: #{e.message}"
+          Bundler.ui.warn("Failed to load namespace lockfile: #{e.message}")
         end
 
         # Generate namespace lockfile after resolution
@@ -84,12 +84,12 @@ module Bundle
           return unless generator.needed?
 
           if generator.generate!
-            Bundler.ui.info "Namespace lockfile written to #{generator.lockfile_path}"
+            Bundler.ui.info("Namespace lockfile written to #{generator.lockfile_path}")
           else
-            Bundler.ui.warn "Failed to write namespace lockfile"
+            Bundler.ui.warn("Failed to write namespace lockfile")
           end
         rescue StandardError => e
-          Bundler.ui.warn "Error generating namespace lockfile: #{e.message}"
+          Bundler.ui.warn("Error generating namespace lockfile: #{e.message}")
         end
       end
     end
@@ -98,4 +98,3 @@ end
 
 # Auto-install integration hooks when loaded
 Bundle::Namespace::BundlerIntegration.install! if defined?(Bundler)
-
