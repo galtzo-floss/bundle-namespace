@@ -186,23 +186,23 @@ Use the `namespace` macro in your Gemfile, similar to the `platform` macro:
 ```ruby
 # Block syntax - namespace within default source
 namespace :myorg do
-  gem 'shared-library', '~> 2.0'
-  gem 'custom-middleware'
+  gem "shared-library", "~> 2.0"
+  gem "custom-middleware"
 end
 
 # Within a specific source
-source 'https://gems.mycompany.com' do
+source "https://gems.mycompany.com" do
   namespace :engineering do
-    gem 'internal-tools', '~> 1.5'
+    gem "internal-tools", "~> 1.5"
   end
-  
+
   namespace :security do
-    gem 'internal-tools', '~> 2.0'  # Different version, same name!
+    gem "internal-tools", "~> 2.0"  # Different version, same name!
   end
 end
 
 # Option syntax
-gem 'my-gem', '~> 1.0', namespace: :myorg
+gem "my-gem", "~> 1.0", namespace: :myorg
 ```
 
 ### Multiple Namespaces
@@ -210,20 +210,20 @@ gem 'my-gem', '~> 1.0', namespace: :myorg
 Handle the same gem from different namespaces:
 
 ```ruby
-source 'https://rubygems.org' do
+source "https://rubygems.org" do
   namespace :myorganization do
-    gem 'rails', '~> 7.0', github: 'myorganization/rails', branch: 'custom'
+    gem "rails", "~> 7.0", github: "myorganization/rails", branch: "custom"
   end
 end
 
 # Or for multi-tenant applications
-source 'https://gems.saas-platform.com' do
+source "https://gems.saas-platform.com" do
   namespace :tenant_a do
-    gem 'custom-theme', '~> 1.0'
+    gem "custom-theme", "~> 1.0"
   end
-  
+
   namespace :tenant_b do
-    gem 'custom-theme', '~> 2.0'
+    gem "custom-theme", "~> 2.0"
   end
 end
 ```
@@ -235,7 +235,7 @@ Namespaces can be nested for complex organization:
 ```ruby
 namespace :parent do
   namespace :child do
-    gem 'nested-gem'
+    gem "nested-gem"
   end
 end
 ```
@@ -352,15 +352,15 @@ The plugin uses **module prepending** to minimally monkey-patch Bundler:
 ### Enterprise Internal Gems
 
 ```ruby
-source 'https://gems.mycompany.com' do
+source "https://gems.mycompany.com" do
   namespace :platform_team do
-    gem 'core-services', '~> 3.0'
-    gem 'monitoring-toolkit'
+    gem "core-services", "~> 3.0"
+    gem "monitoring-toolkit"
   end
-  
+
   namespace :security_team do
-    gem 'core-services', '~> 2.5'  # Legacy compatibility
-    gem 'security-scanner'
+    gem "core-services", "~> 2.5"  # Legacy compatibility
+    gem "security-scanner"
   end
 end
 ```
@@ -368,9 +368,9 @@ end
 ### Testing Forked Gems
 
 ```ruby
-source 'https://rubygems.org' do
+source "https://rubygems.org" do
   namespace :myorganization do
-    gem 'rails', github: 'myorganization/rails', branch: 'custom-patches'
+    gem "rails", github: "myorganization/rails", branch: "custom-patches"
   end
 end
 ```
@@ -378,13 +378,13 @@ end
 ### Multi-Tenant Applications
 
 ```ruby
-source 'https://gems.saas-platform.com' do
+source "https://gems.saas-platform.com" do
   namespace :tenant_a do
-    gem 'custom-theme', '~> 1.0'
+    gem "custom-theme", "~> 1.0"
   end
-  
+
   namespace :tenant_b do
-    gem 'custom-theme', '~> 2.0'
+    gem "custom-theme", "~> 2.0"
   end
 end
 ```

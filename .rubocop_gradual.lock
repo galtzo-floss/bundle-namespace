@@ -2,17 +2,17 @@
   "PHASE_1_SUMMARY.md:2484703009": [
     [43, 6, 3, "Layout/BlockAlignment: `end` at 43, 5 is not aligned with `namespace :myorg do` at 41, 0.", 193405706]
   ],
-  "PHASE_4_SUMMARY.md:2694580164": [
+  "PHASE_4_SUMMARY.md:3854948356": [
     [543, 41, 3, "Lint/Syntax: unexpected token tBDOT3\n(Using Ruby 2.7 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 193347403]
   ],
-  "PRD.md:2965394960": [
+  "PRD.md:135609474": [
     [325, 15, 1, "Lint/Syntax: unexpected token tLT\n(Using Ruby 2.7 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 177561],
     [325, 30, 1, "Lint/Syntax: unexpected token tCOMMA\n(Using Ruby 2.7 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 177545]
   ],
   "lib/bundle/namespace/bundler_integration.rb:1575623494": [
     [80, 11, 31, "Style/InvertibleUnlessCondition: Prefer `if Registry.size <= 0` over `unless Registry.size > 0`.", 2962287917]
   ],
-  "lib/bundle/namespace/configuration.rb:1359141044": [
+  "lib/bundle/namespace/configuration.rb:3911257894": [
     [12, 18, 12, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 472291090],
     [12, 38, 12, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 472291090],
     [13, 11, 12, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 472291090],
@@ -39,10 +39,10 @@
   "lib/bundle/namespace/resolver_extension.rb:4106858701": [
     [93, 9, 33, "Style/InvertibleUnlessCondition: Prefer `if namespaces.size <= 1` over `unless namespaces.size > 1`.", 1712681321]
   ],
-  "spec/bundle/namespace/bundler_integration_spec.rb:1544091756": [
+  "spec/bundle/namespace/bundler_integration_spec.rb:2981051966": [
     [80, 7, 54, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [81, 82].", 2358530008],
     [81, 7, 56, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [80, 82].", 2739488678],
-    [82, 7, 85, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [80, 81].", 3234469692]
+    [82, 7, 84, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [80, 81].", 2268624846]
   ],
   "spec/bundle/namespace/errors_spec.rb:1682863453": [
     [5, 1, 56, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 1641399659]

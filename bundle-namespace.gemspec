@@ -114,7 +114,7 @@ Gem::Specification.new do |spec|
   #       Development dependencies that require strictly newer Ruby versions should be in a "gemfile",
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
-  spec.add_development_dependency "bundler", ">= 2.3.0"
+  spec.add_development_dependency("bundler", ">= 2.3.0")
 
   # Dev, Test, & Release Tasks
   spec.add_development_dependency("kettle-dev", "~> 1.1")                     # ruby >= 2.3.0
