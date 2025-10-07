@@ -1,4 +1,4 @@
-name: MRI 3.0, 3.1 (EOL)
+name: MRI 3.1 (EOL)
 
 permissions:
   contents: read
@@ -37,14 +37,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # Ruby 3.0
-          - ruby: "ruby-3.0"
-            appraisal: "ruby-3-0"
-            exec_cmd: "rake test"
-            gemfile: "Appraisal.root"
-            rubygems: '3.5.23'
-            bundler: '2.5.23'
-
           # Ruby 3.1
           - ruby: "ruby-3.1"
             appraisal: "ruby-3-1"
