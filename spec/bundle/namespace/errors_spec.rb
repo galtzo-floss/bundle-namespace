@@ -200,4 +200,3 @@ RSpec.describe Bundle::Namespace::Registry do
     end
   end
 end
-

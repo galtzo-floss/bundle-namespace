@@ -70,7 +70,7 @@ module Bundle
         super && namespace == other.namespace
       end
 
-      alias eql? ==
+      alias_method :eql?, :==
 
       # Include namespace in hash calculation
       #
@@ -240,7 +240,7 @@ module Bundle
         # In a real implementation, we'd need to modify the fetch logic
         # For now, delegate to super and log the namespace
         if Configuration.warn_on_missing?
-          Bundler.ui.warn "Fetching namespaced gem: #{namespaced_name}"
+          Bundler.ui.warn("Fetching namespaced gem: #{namespaced_name}")
         end
 
         super(spec, options)
@@ -248,4 +248,3 @@ module Bundle
     end
   end
 end
-

@@ -2,9 +2,9 @@
 # frozen_string_literal: true
 
 # Simple test runner to verify basic functionality without full test suite
-require_relative 'lib/bundle/namespace/registry'
-require_relative 'lib/bundle/namespace/configuration'
-require_relative 'lib/bundle/namespace/errors'
+require "bundle/namespace/registry"
+require "bundle/namespace/configuration"
+require "bundle/namespace/errors"
 
 puts "Testing Bundle::Namespace Core Components"
 puts "=" * 60
@@ -65,7 +65,7 @@ rescue Bundle::Namespace::NamespaceConflictError => e
     puts "✓ NamespaceConflictError has correct message"
   else
     puts "✗ NamespaceConflictError message test failed"
-    exit 1
+    exit(1)
   end
 end
 
@@ -76,11 +76,10 @@ rescue Bundle::Namespace::NamespaceNotSupportedError => e
     puts "✓ NamespaceNotSupportedError has correct message"
   else
     puts "✗ NamespaceNotSupportedError message test failed"
-    exit 1
+    exit(1)
   end
 end
 
 puts "\n" + "=" * 60
 puts "All core component tests passed! ✓"
 puts "=" * 60
-

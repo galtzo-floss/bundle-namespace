@@ -21,7 +21,7 @@ This implementation plan breaks down the Bundle::Namespace plugin development in
   - [ ] `lib/bundle/namespace/plugin.rb` - Main plugin class
   - [ ] `lib/bundle/namespace/hooks.rb` - Bundler hook integration
   - [ ] Register with Bundler plugin system
-  
+
 ### 1.3 Core Data Structures
 - [ ] `lib/bundle/namespace/dependency_extension.rb` - Extend Bundler::Dependency
 - [ ] `lib/bundle/namespace/registry.rb` - Track namespace mappings
@@ -191,13 +191,13 @@ spec/integration/
 
 ```ruby
 # In gemspec
-spec.add_dependency "bundler", ">= 2.3.0"
+spec.add_dependency("bundler", ">= 2.3.0")
 
 # Development dependencies
-spec.add_development_dependency "rspec", "~> 3.12"
-spec.add_development_dependency "rake", "~> 13.0"
-spec.add_development_dependency "rubocop", "~> 1.50"
-spec.add_development_dependency "yard", "~> 0.9"
+spec.add_development_dependency("rspec", "~> 3.12")
+spec.add_development_dependency("rake", "~> 13.0")
+spec.add_development_dependency("rubocop", "~> 1.50")
+spec.add_development_dependency("yard", "~> 0.9")
 ```
 
 ---

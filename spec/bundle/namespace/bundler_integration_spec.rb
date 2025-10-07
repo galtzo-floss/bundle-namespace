@@ -96,4 +96,3 @@ RSpec.describe Bundle::Namespace::BundlerIntegration do
     end
   end
 end
-

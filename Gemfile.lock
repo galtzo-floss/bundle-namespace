@@ -14,9 +14,9 @@ PATH
   remote: .
   specs:
     bundle-namespace (0.1.0)
+      version_gem (~> 1.1, >= 1.1.9)
 
 GEM
-  remote: https://rubygems.org/
   remote: https://gem.coop/
   specs:
     ansi (1.5.0)

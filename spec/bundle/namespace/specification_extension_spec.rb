@@ -126,4 +126,3 @@ RSpec.describe Bundle::Namespace::SpecificationExtension do
     end
   end
 end
-

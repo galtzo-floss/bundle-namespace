@@ -1,0 +1,60 @@
+{
+  "PHASE_1_SUMMARY.md:2484703009": [
+    [43, 6, 3, "Layout/BlockAlignment: `end` at 43, 5 is not aligned with `namespace :myorg do` at 41, 0.", 193405706]
+  ],
+  "PHASE_4_SUMMARY.md:2694580164": [
+    [543, 41, 3, "Lint/Syntax: unexpected token tBDOT3\n(Using Ruby 2.7 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 193347403]
+  ],
+  "PRD.md:2965394960": [
+    [325, 15, 1, "Lint/Syntax: unexpected token tLT\n(Using Ruby 2.7 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 177561],
+    [325, 30, 1, "Lint/Syntax: unexpected token tCOMMA\n(Using Ruby 2.7 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 177545]
+  ],
+  "lib/bundle/namespace/bundler_integration.rb:1575623494": [
+    [80, 11, 31, "Style/InvertibleUnlessCondition: Prefer `if Registry.size <= 0` over `unless Registry.size > 0`.", 2962287917]
+  ],
+  "lib/bundle/namespace/configuration.rb:1359141044": [
+    [12, 18, 12, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 472291090],
+    [12, 38, 12, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 472291090],
+    [13, 11, 12, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 472291090],
+    [19, 9, 24, "ThreadSafety/ClassAndModuleAttributes: Avoid mutating class and module attributes.", 829878667],
+    [25, 18, 16, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 3878180170],
+    [25, 42, 16, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 3878180170],
+    [26, 11, 16, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 3878180170],
+    [32, 9, 28, "ThreadSafety/ClassAndModuleAttributes: Avoid mutating class and module attributes.", 2984404947],
+    [38, 11, 14, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 767445018],
+    [44, 9, 26, "ThreadSafety/ClassAndModuleAttributes: Avoid mutating class and module attributes.", 2622229251],
+    [48, 11, 12, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 472291090],
+    [49, 11, 16, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 3878180170],
+    [50, 11, 14, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 767445018]
+  ],
+  "lib/bundle/namespace/plugin.rb:2916456580": [
+    [15, 21, 10, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 3181278341],
+    [23, 11, 10, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 3181278341],
+    [30, 11, 10, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 3181278341]
+  ],
+  "lib/bundle/namespace/registry.rb:234169034": [
+    [77, 11, 11, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 4084548981],
+    [91, 11, 11, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 4084548981]
+  ],
+  "lib/bundle/namespace/resolver_extension.rb:4106858701": [
+    [93, 9, 33, "Style/InvertibleUnlessCondition: Prefer `if namespaces.size <= 1` over `unless namespaces.size > 1`.", 1712681321]
+  ],
+  "spec/bundle/namespace/bundler_integration_spec.rb:1544091756": [
+    [80, 7, 54, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [81, 82].", 2358530008],
+    [81, 7, 56, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [80, 82].", 2739488678],
+    [82, 7, 85, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [80, 81].", 3234469692]
+  ],
+  "spec/bundle/namespace/errors_spec.rb:1682863453": [
+    [5, 1, 56, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 1641399659]
+  ],
+  "spec/bundle/namespace/resolver_extension_spec.rb:2284179786": [
+    [20, 7, 23, "RSpec/IdenticalEqualityAssertion: Identical expressions on both sides of the equality may indicate a flawed test.", 536621609],
+    [20, 14, 4, "RSpec/ExpectActual: Provide the actual value you are testing to `expect(...)`.", 2087932467],
+    [43, 7, 23, "RSpec/IdenticalEqualityAssertion: Identical expressions on both sides of the equality may indicate a flawed test.", 536621609],
+    [43, 14, 4, "RSpec/ExpectActual: Provide the actual value you are testing to `expect(...)`.", 2087932467]
+  ],
+  "spec/bundle/namespace/specification_extension_spec.rb:3784068652": [
+    [101, 5, 40, "RSpec/IndexedLet: This `let` statement uses `1` in its name. Please give it a meaningful name.", 3413142080],
+    [102, 5, 40, "RSpec/IndexedLet: This `let` statement uses `2` in its name. Please give it a meaningful name.", 1613629187]
+  ]
+}

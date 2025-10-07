@@ -9,7 +9,7 @@ module Bundle
     class NamespaceConflictError < Error
       def initialize(gem_name, namespace1, namespace2)
         super("Gem '#{gem_name}' specified in multiple namespaces: " \
-              "#{namespace1} and #{namespace2}")
+          "#{namespace1} and #{namespace2}")
       end
     end
 
@@ -17,7 +17,7 @@ module Bundle
     class NamespaceNotSupportedError < Error
       def initialize(source)
         super("Source '#{source}' does not support namespaces. " \
-              "Please use a namespace-aware gem server or disable strict mode.")
+          "Please use a namespace-aware gem server or disable strict mode.")
       end
     end
 
@@ -36,4 +36,3 @@ module Bundle
     end
   end
 end
-

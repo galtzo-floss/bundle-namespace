@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: IMPLEMENTATION_PLAN
+  
+    &mdash; Documentation by YARD 0.9.37
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "IMPLEMENTATION_PLAN";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: IMPLEMENTATION_PLAN</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><h1 id="implementation-plan-bundlenamespace">Implementation Plan: Bundle::Namespace</h1>
+
+<p>Based on PRD.md - Created: October 3, 2025</p>
+
+<hr>
+
+<h2 id="overview">Overview</h2>
+
+<p>This implementation plan breaks down the Bundle::Namespace plugin development into actionable tasks, organized by phase and priority.</p>
+
+<hr>
+
+<h2 id="phase-1-foundation-current-phase">Phase 1: Foundation (Current Phase)</h2>
+
+<h3 id="11-project-setup--already-done">1.1 Project Setup ✓ (Already Done)</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>Gem structure created</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>Basic module scaffold exists</li>
+</ul>
+
+<h3 id="12-plugin-infrastructure-in-progress">1.2 Plugin Infrastructure (In Progress)</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Create plugin registration system
+    <ul class="task-list">
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/plugin.rb</code> - Main plugin class</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/hooks.rb</code> - Bundler hook integration</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Register with Bundler plugin system</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="13-core-data-structures">1.3 Core Data Structures</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/dependency_extension.rb</code> - Extend Bundler::Dependency</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/registry.rb</code> - Track namespace mappings</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/errors.rb</code> - Custom error classes</li>
+</ul>
+
+<h3 id="14-dsl-extension">1.4 DSL Extension</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/dsl_extension.rb</code> - Add namespace macro
+    <ul class="task-list">
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Implement <code>namespace(*namespaces, &amp;block)</code> method</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Track namespace stack with <code>@namespaces</code>
+</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Modify dependency creation to include namespace metadata</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Support both block syntax and option syntax</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="15-basic-tests">1.5 Basic Tests</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>spec/bundle/namespace/dsl_extension_spec.rb</code> - DSL tests</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>spec/bundle/namespace/registry_spec.rb</code> - Registry tests</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>spec/bundle/namespace/dependency_extension_spec.rb</code> - Dependency tests</li>
+</ul>
+
+<hr>
+
+<h2 id="phase-2-resolution">Phase 2: Resolution</h2>
+
+<h3 id="21-source-enhancement">2.1 Source Enhancement</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/source_extensions.rb</code>
+    <ul class="task-list">
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Extend Bundler::Source::Rubygems</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Implement namespace-aware spec lookups</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Add namespace path construction (/<namespace>/<gem-name>)</gem-name></namespace>
+</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Implement namespace detection for sources</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="22-resolver-integration">2.2 Resolver Integration</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/resolver_extension.rb</code>
+    <ul class="task-list">
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Extend Bundler::Resolver</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Modify package identification to include namespace</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Update version filtering logic</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Add conflict detection for namespaced gems</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="23-specification-enhancement">2.3 Specification Enhancement</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/specification_extension.rb</code>
+    <ul class="task-list">
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Track namespace in gem specifications</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Modify spec comparison to include namespace</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="24-integration-tests">2.4 Integration Tests</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>spec/integration/namespace_resolution_spec.rb</code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>spec/integration/source_namespace_spec.rb</code>
+</li>
+</ul>
+
+<hr>
+
+<h2 id="phase-3-lockfile">Phase 3: Lockfile</h2>
+
+<h3 id="31-lockfile-generator">3.1 Lockfile Generator</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/lockfile_generator.rb</code>
+    <ul class="task-list">
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Create YAML structure (source -&gt; namespace -&gt; gem)</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Generate bundler-namespace-lock.yaml</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Hook into Bundler’s lockfile generation</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="32-lockfile-parser">3.2 Lockfile Parser</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/lockfile_parser.rb</code>
+    <ul class="task-list">
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Parse YAML lockfile</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Validate structure</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Merge namespace data into resolution</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="33-lockfile-validation">3.3 Lockfile Validation</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/lockfile_validator.rb</code>
+    <ul class="task-list">
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Check consistency between Gemfile, Gemfile.lock, and namespace lockfile</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Detect stale namespace entries</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Warn on conflicts</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="34-end-to-end-tests">3.4 End-to-End Tests</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>spec/integration/lockfile_generation_spec.rb</code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>spec/integration/lockfile_parsing_spec.rb</code>
+</li>
+</ul>
+
+<hr>
+
+<h2 id="phase-4-polish">Phase 4: Polish</h2>
+
+<h3 id="41-error-handling">4.1 Error Handling</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Implement all error classes from errors.rb</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Add helpful error messages</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Create error recovery strategies</li>
+</ul>
+
+<h3 id="42-configuration">4.2 Configuration</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code>lib/bundle/namespace/configuration.rb</code>
+    <ul class="task-list">
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Support .bundle/config integration</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Implement strict_mode</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Implement warn_on_missing</li>
+      <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Custom lockfile path</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="43-documentation">4.3 Documentation</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Update README.md with usage examples</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Add YARD documentation to all public APIs</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Create USAGE.md with detailed examples</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Add inline code comments</li>
+</ul>
+
+<h3 id="44-performance-optimization">4.4 Performance Optimization</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Profile namespace checking overhead</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Optimize hot paths</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Add benchmarking suite</li>
+</ul>
+
+<h3 id="45-beta-release">4.5 Beta Release</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Version 0.1.0 release</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Announce to community</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Gather feedback</li>
+</ul>
+
+<hr>
+
+<h2 id="implementation-order-this-session">Implementation Order (This Session)</h2>
+
+<h3 id="step-1-core-infrastructure-">Step 1: Core Infrastructure ✅</h3>
+<ol>
+  <li>Update gemspec with proper metadata</li>
+  <li>Create error classes</li>
+  <li>Create registry class</li>
+  <li>Create plugin registration</li>
+</ol>
+
+<h3 id="step-2-dsl-extension-">Step 2: DSL Extension ✅</h3>
+<ol>
+  <li>Implement DSL extension module</li>
+  <li>Add namespace tracking</li>
+  <li>Support both syntaxes (block and option)</li>
+  <li>Write tests</li>
+</ol>
+
+<h3 id="step-3-dependency-extension">Step 3: Dependency Extension</h3>
+<ol>
+  <li>Extend dependency to store namespace</li>
+  <li>Update dependency comparison</li>
+  <li>Write tests</li>
+</ol>
+
+<h3 id="step-4-basic-integration">Step 4: Basic Integration</h3>
+<ol>
+  <li>Wire up plugin to Bundler</li>
+  <li>Test basic namespace declaration</li>
+  <li>Verify no breakage of existing functionality</li>
+</ol>
+
+<hr>
+
+<h2 id="file-structure">File Structure</h2>
+
+<pre class="code ruby"><code class="ruby">lib/bundle/namespace/
+├── version.rb (exists)
+├── plugin.rb (new) - Main plugin entry point
+├── hooks.rb (new) - Bundler hook registration
+├── errors.rb (new) - Custom error classes
+├── registry.rb (new) - Namespace tracking
+├── configuration.rb (new) - Plugin configuration
+├── dsl_extension.rb (new) - Gemfile DSL enhancement
+├── dependency_extension.rb (new) - Dependency enhancement
+├── source_extensions.rb (new) - Source enhancements
+├── resolver_extension.rb (new) - Resolver enhancement
+├── specification_extension.rb (new) - Spec enhancement
+├── lockfile_generator.rb (new) - YAML lockfile generation
+├── lockfile_parser.rb (new) - YAML lockfile parsing
+└── lockfile_validator.rb (new) - Lockfile validation
+
+spec/bundle/namespace/
+├── namespace_spec.rb (exists)
+├── dsl_extension_spec.rb (new)
+├── registry_spec.rb (new)
+├── dependency_extension_spec.rb (new)
+├── lockfile_generator_spec.rb (new)
+└── ... (more test files)
+
+spec/integration/
+├── namespace_resolution_spec.rb (new)
+├── lockfile_generation_spec.rb (new)
+└── ... (more integration tests)
+</code></pre>
+
+<hr>
+
+<h2 id="dependencies-to-add">Dependencies to Add</h2>
+
+<pre class="code language-ruby"><code class="language-ruby"># In gemspec
+spec.add_dependency(&quot;bundler&quot;, &quot;&gt;= 2.3.0&quot;)
+
+# Development dependencies
+spec.add_development_dependency(&quot;rspec&quot;, &quot;~&gt; 3.12&quot;)
+spec.add_development_dependency(&quot;rake&quot;, &quot;~&gt; 13.0&quot;)
+spec.add_development_dependency(&quot;rubocop&quot;, &quot;~&gt; 1.50&quot;)
+spec.add_development_dependency(&quot;yard&quot;, &quot;~&gt; 0.9&quot;)
+</code></pre>
+
+<hr>
+
+<h2 id="testing-strategy">Testing Strategy</h2>
+
+<h3 id="unit-tests">Unit Tests</h3>
+<ul>
+  <li>Test each module in isolation</li>
+  <li>Mock Bundler internals</li>
+  <li>95%+ coverage target</li>
+</ul>
+
+<h3 id="integration-tests">Integration Tests</h3>
+<ul>
+  <li>Use actual Gemfile processing</li>
+  <li>Test with mock gem servers</li>
+  <li>Verify lockfile generation</li>
+</ul>
+
+<h3 id="compatibility-tests">Compatibility Tests</h3>
+<ul>
+  <li>Test with Bundler 2.3.x, 2.4.x, 2.5.x</li>
+  <li>Test with Ruby 2.7, 3.0, 3.1, 3.2, 3.3</li>
+</ul>
+
+<hr>
+
+<h2 id="success-criteria">Success Criteria</h2>
+
+<h3 id="phase-1">Phase 1</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Plugin loads without errors</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>DSL namespace block can be parsed</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Dependencies track namespace metadata</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Tests pass</li>
+</ul>
+
+<h3 id="phase-2">Phase 2</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Namespaced gems can be resolved (with mock source)</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Non-namespaced gems still work</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Namespace conflicts are detected</li>
+</ul>
+
+<h3 id="phase-3">Phase 3</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>bundler-namespace-lock.yaml is generated</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Lockfile is parsed correctly</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Validation detects inconsistencies</li>
+</ul>
+
+<h3 id="phase-4">Phase 4</h3>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>All tests pass</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Documentation complete</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Performance impact &lt; 5%</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Beta release published</li>
+</ul>
+
+<hr>
+
+<p><strong>Next Steps</strong>: Begin Phase 1 implementation starting with gemspec update and core infrastructure.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Tue Oct  7 10:48:47 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.4.6).
+</div>
+
+    </div>
+  </body>
+</html>

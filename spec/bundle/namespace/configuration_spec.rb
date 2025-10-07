@@ -68,4 +68,3 @@ RSpec.describe Bundle::Namespace::Configuration do
     end
   end
 end
-

@@ -16,9 +16,7 @@ module Bundle
         # Set strict mode
         #
         # @param value [Boolean]
-        def strict_mode=(value)
-          @strict_mode = value
-        end
+        attr_writer :strict_mode
 
         # Whether to warn when namespaces are ignored by non-supporting sources
         #
@@ -31,9 +29,7 @@ module Bundle
         # Set warn on missing
         #
         # @param value [Boolean]
-        def warn_on_missing=(value)
-          @warn_on_missing = value
-        end
+        attr_writer :warn_on_missing
 
         # Custom path for namespace lockfile
         #
@@ -45,9 +41,7 @@ module Bundle
         # Set lockfile path
         #
         # @param path [String]
-        def lockfile_path=(path)
-          @lockfile_path = path
-        end
+        attr_writer :lockfile_path
 
         # Reset all configuration to defaults
         def reset!
@@ -88,4 +82,3 @@ module Bundle
     end
   end
 end
-

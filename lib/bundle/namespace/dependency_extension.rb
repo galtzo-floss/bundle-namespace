@@ -54,8 +54,7 @@ module Bundle
         [super, namespace].hash
       end
 
-      alias eql? ==
+      alias_method :eql?, :==
     end
   end
 end
-

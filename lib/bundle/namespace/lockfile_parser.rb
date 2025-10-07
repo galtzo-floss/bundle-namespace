@@ -157,4 +157,3 @@ module Bundle
     end
   end
 end
-

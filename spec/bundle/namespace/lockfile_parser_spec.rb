@@ -220,4 +220,3 @@ RSpec.describe Bundle::Namespace::LockfileParser do
     end
   end
 end
-
